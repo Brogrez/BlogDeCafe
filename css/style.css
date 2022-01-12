@@ -31,6 +31,7 @@ a {
 }
 h1, h2, h3, h4 {
     font-family: var(--fuenteHeading);
+    line-height: 1.2;
 }
 h1 {
     font-size: 4.8rem;
@@ -77,7 +78,9 @@ img {
     }
     
 }
-
+.barra {
+    padding-top: 4rem;
+}
 
 @media (min-width: 768px) {
     .barra {
@@ -90,8 +93,7 @@ img {
     .navegacion {
         display: flex;
         gap: 2rem;
-    }
-    
+    }    
 }
 .logo{
         color: var(--blanco)
@@ -133,9 +135,11 @@ img {
     color: var(--blanco);
     text-align: center;
     padding: 1rem 3rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
    
 }
 @media (min-width: 768px) {
@@ -147,4 +151,69 @@ img {
 }
 .boton--primario {
     background-color: var(--negro);
+}
+.boton--secundario {
+    background-color: var(--primario);
+}
+.cursos{
+    list-style: none;
+}
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label,
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info,
+.curso__info {
+    font-weight: normal;
+}
+.widget-curso__label,
+.widget-curso__info,
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+ 
+/** footer **/
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+
+/** sobre nosotros **/
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    
+}
+
+/** cursos **/
+
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type {
+    border: none;
 }
